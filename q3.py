@@ -144,9 +144,6 @@ if "Revenue" in df.columns:
 if "Genre" not in df.columns:
     df["Genre"] = pd.NA
 
-# ----------------------------------------------------------
-# 6. BASIC EXPLORATION & CORRELATION
-# ----------------------------------------------------------
 corr_cols = []
 for c in [
     "Rating",
