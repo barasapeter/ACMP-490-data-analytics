@@ -125,10 +125,6 @@ if "OtherInfo" in df.columns:
     other_parsed = df["OtherInfo"].apply(extract_otherinfo_fields)
     df = pd.concat([df, other_parsed], axis=1)
 
-# ----------------------------------------------------------
-# 5. DERIVED FEATURES
-# ----------------------------------------------------------
-# Critic composite (simple mean of directors/writers ratings when available)
 if {"DirectorsRating", "WritersRating"}.issubset(df.columns):
     df["CriticComposite"] = df[["DirectorsRating", "WritersRating"]].mean(axis=1)
 
