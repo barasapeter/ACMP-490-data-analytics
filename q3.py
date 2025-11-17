@@ -173,10 +173,8 @@ if corr_cols:
 else:
     print("No numeric columns available for correlation analysis.")
 
-# ----------------------------------------------------------
-# 7. HIGHEST-RATED GENRES (if genre data exists)
-# ----------------------------------------------------------
 if df["Genre"].notna().sum() > 0:
+
     def genre_to_list(g):
         if isinstance(g, str):
             if "|" in g:
