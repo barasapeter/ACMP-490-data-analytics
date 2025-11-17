@@ -231,9 +231,6 @@ if "Writer" in df.columns:
     print(writer_mean.head(20))
     writer_mean.to_csv(os.path.join(output_dir, "writer_ratings.csv"))
 
-# ----------------------------------------------------------
-# 9. TREND: AVERAGE RATING BY RELEASE YEAR
-# ----------------------------------------------------------
 if "Date" in df.columns:
     yearly = df.dropna(subset=["Date"]).groupby("Date")["Rating"].mean().sort_index()
     if not yearly.empty:
