@@ -252,9 +252,6 @@ if "Date" in df.columns:
 else:
     print("No Date column present — skipping year trend.")
 
-# ----------------------------------------------------------
-# 10. DISTRIBUTIONS & SCATTER (Critic vs Audience)
-# ----------------------------------------------------------
 if "Rating" in df.columns:
     plt.figure(figsize=(8, 5))
     sns.histplot(df["Rating"].dropna(), bins=20)
