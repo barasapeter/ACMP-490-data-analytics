@@ -132,7 +132,6 @@ if "OtherInfo" in df.columns:
 if {"DirectorsRating", "WritersRating"}.issubset(df.columns):
     df["CriticComposite"] = df[["DirectorsRating", "WritersRating"]].mean(axis=1)
 
-# Log-transform followers to reduce skew
 if "TotalFollowers" in df.columns:
     df["LogFollowers"] = np.log1p(df["TotalFollowers"])
 
