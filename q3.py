@@ -200,9 +200,7 @@ if df["Genre"].notna().sum() > 0:
 else:
     print("No genre data present — skipping genre ranking.")
 
-# ----------------------------------------------------------
-# 8. DIRECTOR / WRITER RANKINGS
-# ----------------------------------------------------------
+
 if "Director" in df.columns:
     director_mean = (
         df.explode("Director")
