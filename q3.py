@@ -136,7 +136,6 @@ if {"DirectorsRating", "WritersRating"}.issubset(df.columns):
 if "TotalFollowers" in df.columns:
     df["LogFollowers"] = np.log1p(df["TotalFollowers"])
 
-# If Revenue exists, make log revenue
 if "Revenue" in df.columns:
     df["LogRevenue"] = np.log1p(df["Revenue"].fillna(0))
 
