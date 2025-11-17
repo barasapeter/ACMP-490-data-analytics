@@ -140,7 +140,6 @@ if "TotalFollowers" in df.columns:
 if "Revenue" in df.columns:
     df["LogRevenue"] = np.log1p(df["Revenue"].fillna(0))
 
-# Placeholder Genre column (if not present). If you do have genre info elsewhere, map it here.
 if "Genre" not in df.columns:
     df["Genre"] = pd.NA
 
