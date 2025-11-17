@@ -275,9 +275,6 @@ if {"CriticComposite", "Rating"}.issubset(df.columns):
     plt.savefig(os.path.join(output_dir, "critic_vs_audience_scatter.png"))
     plt.show()
 
-# ----------------------------------------------------------
-# 11. SAVE CLEANED / ENRICHED DATA
-# ----------------------------------------------------------
 clean_path = os.path.join(output_dir, "movie_db_cleaned.csv")
 df.to_csv(clean_path, index=False)
 print(f"\nCleaned/enriched data saved to: {clean_path}")
