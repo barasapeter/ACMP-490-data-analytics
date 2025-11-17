@@ -177,7 +177,6 @@ else:
 # 7. HIGHEST-RATED GENRES (if genre data exists)
 # ----------------------------------------------------------
 if df["Genre"].notna().sum() > 0:
-    # If Genre contains lists or pipe-separated strings, normalize to lists first
     def genre_to_list(g):
         if isinstance(g, str):
             if "|" in g:
