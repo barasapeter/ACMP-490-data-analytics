@@ -38,7 +38,6 @@ for col in bool_cols:
 # Convert sex to binary numeric
 df["sex"] = df["sex"].map({"Male": 1, "Female": 0})
 
-# Outcome: num > 0 means heart disease
 df["disease_present"] = (df["num"] > 0).astype(int)
 
 print("\n=== DESCRIPTIVE STATISTICS ===")
