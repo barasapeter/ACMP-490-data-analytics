@@ -29,7 +29,7 @@ print(df.head())
 # ---------------------------
 # 2. Clean + prepare
 # ---------------------------
-# Convert TRUE/FALSE to numeric
+
 bool_cols = ["fbs", "exang"]
 for col in bool_cols:
     if col in df.columns:
