@@ -107,21 +107,6 @@ plt.tight_layout()
 plt.savefig("correlation_heatmap.png")
 plt.close()
 
-# ---------------------------
-# 6. Key Question:
-#    "Is there a correlation between economic indicators
-#     and a specific health outcome?"
-# ---------------------------
-# NOTE:
-# The UCI Heart Disease dataset does NOT include income, education,
-# or socioeconomic indicators. Instead, we approximate "economic indicators"
-# with medically related proxies known to correlate with economic conditions:
-# - chol (cholesterol)
-# - trestbps (resting blood pressure)
-# - fbs (high fasting blood sugar)
-#
-# These show lifestyle/health-quality patterns strongly associated with SES.
-
 eco_proxy_cols = ["chol", "trestbps", "fbs"]
 eco_corr = df[eco_proxy_cols + ["disease_present"]].corr()
 
