@@ -57,11 +57,9 @@ df.describe().to_csv("descriptive_stats.csv")
 sex_rate = df.groupby("sex")["disease_present"].mean()
 print("\nDisease rate by sex:\n", sex_rate)
 
-# Disease rate by chest-pain type
 cp_rate = df.groupby("cp")["disease_present"].mean()
 print("\nDisease rate by chest-pain type:\n", cp_rate)
 
-# Plot: disease by sex
 plt.figure(figsize=(6, 4))
 sns.barplot(data=df, x="sex", y="disease_present")
 plt.title("Heart Disease Rate by Sex")
