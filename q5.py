@@ -148,10 +148,6 @@ plt.tight_layout()
 plt.savefig("age_vs_chol.png")
 plt.close()
 
-# ---------------------------
-# SUMMARY REPORT
-# ---------------------------
-
 print("\n=== SUMMARY ===")
 print("• Descriptive stats saved: descriptive_stats.csv")
 print("• Correlation matrix saved: correlation_matrix.csv")
