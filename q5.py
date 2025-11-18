@@ -78,9 +78,6 @@ plt.tight_layout()
 plt.savefig("disease_rate_by_cp.png")
 plt.close()
 
-# ---------------------------
-# 5. Correlation analysis
-# ---------------------------
 numerical_cols = [
     "age",
     "trestbps",
