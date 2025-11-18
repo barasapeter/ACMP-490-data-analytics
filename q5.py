@@ -130,10 +130,6 @@ print(eco_corr["disease_present"].sort_values(ascending=False))
 
 eco_corr.to_csv("economic_proxy_correlation.csv")
 
-# ---------------------------
-# 7. Visualization of key relationships
-# ---------------------------
-
 plt.figure(figsize=(7, 5))
 sns.scatterplot(data=df, x="chol", y="oldpeak", hue="disease_present", alpha=0.7)
 plt.title("Cholesterol vs ST Depression (colored by disease)")
