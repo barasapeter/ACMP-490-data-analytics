@@ -35,7 +35,6 @@ for col in bool_cols:
     if col in df.columns:
         df[col] = df[col].astype(str).str.upper().map({"TRUE": 1, "FALSE": 0})
 
-# Convert sex to binary numeric
 df["sex"] = df["sex"].map({"Male": 1, "Female": 0})
 
 df["disease_present"] = (df["num"] > 0).astype(int)
