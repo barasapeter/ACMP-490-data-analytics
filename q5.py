@@ -41,9 +41,6 @@ df["sex"] = df["sex"].map({"Male": 1, "Female": 0})
 # Outcome: num > 0 means heart disease
 df["disease_present"] = (df["num"] > 0).astype(int)
 
-# ---------------------------
-# 3. Descriptive statistics
-# ---------------------------
 print("\n=== DESCRIPTIVE STATISTICS ===")
 print(df.describe(include="all"))
 
