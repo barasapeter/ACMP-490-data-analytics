@@ -49,10 +49,6 @@ print(df.describe(include="all"))
 
 df.describe().to_csv("descriptive_stats.csv")
 
-# ---------------------------
-# 4. Demographic comparisons
-# ---------------------------
-
 sex_rate = df.groupby("sex")["disease_present"].mean()
 print("\nDisease rate by sex:\n", sex_rate)
 
