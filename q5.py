@@ -53,7 +53,6 @@ df.describe().to_csv("descriptive_stats.csv")
 # 4. Demographic comparisons
 # ---------------------------
 
-# Disease rate by sex
 sex_rate = df.groupby("sex")["disease_present"].mean()
 print("\nDisease rate by sex:\n", sex_rate)
 
